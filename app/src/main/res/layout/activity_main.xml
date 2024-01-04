@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Task 1 ui of app-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="MindSharperner"
+        app:titleTextColor="@color/white" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/instruction_text"
+        app:layout_constraintBottom_toTopOf="@+id/instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="384dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center_vertical|end"
+        android:text="@string/desc"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.214"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/lvlchoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="44dp"
+        android:text="@string/choose_lvl"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/instructions"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/radioGroupHolder"
+        android:layout_width="255dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499"
+        tools:ignore="MissingConstraints">
+
+        <RadioGroup
+            android:id="@+id/levelButton"
+            android:layout_width="249dp"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints,UselessParent"
+            tools:layout_editor_absoluteX="81dp"
+            tools:layout_editor_absoluteY="266dp">
+
+            <RadioButton
+                android:id="@+id/i3"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/leveli3"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/i5"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:text="@string/leveli5"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RadioButton
+                android:id="@+id/i7"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:text="@string/leveli7"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/num1"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:gravity="center_horizontal"
+        android:text="@string/initialFirstNum"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/operator"
+        android:layout_width="53dp"
+        android:layout_height="38dp"
+        android:text="@string/initialOpr"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/num2"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:text="@string/initialSecondNum"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.639"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="411dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.772"
+        tools:ignore="Autofill,LabelFor,MissingConstraints,SpeakableTextPresentCheck,TextFields,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="310dp"
+        android:layout_height="52dp"
+        android:text="@string/checkButtonText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.877"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        android:id="@+id/Points"
+        android:layout_width="117dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/pointsText"
+        android:textColor="@color/purple"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pointsValue"
+        app:layout_constraintTop_toBottomOf="@+id/checkButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/pointsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/initialPointValue"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkButton"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
